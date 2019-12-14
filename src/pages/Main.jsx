@@ -30,7 +30,10 @@ class Main extends Component {
     this.setState({
       ...this.state,
       error: '',
-      loading: true
+      loading: true,
+      searchImage: [],
+      page: 0,
+      isEmpty: false,
     }, () => this.getDate());
   }
 
@@ -66,7 +69,6 @@ class Main extends Component {
   }
 
   render() {
-    // console.log('env ', process.env.REACT_APP_GIPHY_API_KEY)
     return (
       <Styled.Container>
         <h1>Gif Search</h1>
